@@ -55,7 +55,7 @@ def LDL_driver():
     classification = check_LDL(LDL_value)
     print_result("LDL", LDL_value, classification)
 
-def check_total(total_value)
+def check_total(total_value):
     if total_value < 200:
         answer = "Normal"
     elif 239 >= total_value >= 200:
@@ -64,7 +64,10 @@ def check_total(total_value)
         answer = "Very High"
     return answer
 
-    
+def total_driver():
+    total_value = accept_input("Total")
+    classification = check_total(total_value)
+    print_result("Total Cholesterol", total_value, classification)
 
 interface()
 
