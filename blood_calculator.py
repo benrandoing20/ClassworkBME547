@@ -64,7 +64,7 @@ def check_total(total_value):
     elif 239 >= total_value >= 200:
         answer = "Borderline High"
     else:
-        answer = "Very High"
+        answer = "High"
     return answer
 
 def total_driver():
