@@ -47,6 +47,11 @@ def check_LDL(LDL_value):
         answer = "Very High"
     return answer
 
+def LDL_Driver():
+    LDL_value = accept("LDL")
+    classification = check_LDL(LDL_value)
+    print_result("LDL", LDL_value, classification)
+
 interface()
 
 
