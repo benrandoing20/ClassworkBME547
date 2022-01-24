@@ -15,6 +15,9 @@ def dose_amount():
     print("3 - Community-acquired pneumonia")
     print("4 - Pharyngitis/tonsilitis")
     diagnosis = int(input("Enter a number: "))
+    return diagnosis
+
+def patient_weight():
     print("PATIENT WEIGHT")
     print("Enter patient weight followed by units of kg or lb.")
     print("Examples:  65.3 lb      21.0 kg")
@@ -22,8 +25,15 @@ def dose_amount():
     weight_data = weight_input.split(" ")
     weight = float(weight_data[0])
     units = weight_data[1]
+    return weight, units
+
+
+def pound_to_kg(weight, units):
     if units == "lb":
-        weight = weight / 2.205
+        new_weight = weight / 2.205
+        return new_weight
+
+def dosage_output(diagnosis, weight):
     dosages_mg_per_kg = [30, 10, 10, 12]
     dosage_mg_per_kg = dosages_mg_per_kg[diagnosis-1]
     dosage_mg_first_day = weight * dosage_mg_per_kg
@@ -33,7 +43,11 @@ def dose_amount():
           .format(dosage_mg_first_day))
 
 
+
 if __name__ == '__main__':
-    dose_amount()
+    diagnosis = dose_amount()
+    (size, unit) = patient_weight()
+    pound_to_kg(size, unit)
+    dosage_output(diagnosis, size)
 
 
