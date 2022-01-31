@@ -7,7 +7,7 @@ def import pytest
 	[(0,0), (0,20), 0, 10],
 	[(-10,-10), (10,10),0, 0],
 ])
-def test_check_HDL(input_tuple1,input_tuple2, input_x, expected):
+def test_check_yval(input_tuple1,input_tuple2, input_x, expected):
 	from line_valuey import identify_y
 	answer = identify_y(input_tuple1, input_tuple2, input_x)
 	assert answer == expected
