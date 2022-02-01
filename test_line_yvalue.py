@@ -21,3 +21,12 @@ def test_find_y_int(slope, input_tuple2, expected):
 	from line_yvalue import find_y_int
 	answer = find_y_int(slope, input_tuple2)
 	assert answer == expected
+
+@pytest.mark.parametrize("slope, y_int, input_x, expected", [
+	[1, 0, 5 , 5],
+	[2, 2, 5, 12],
+])
+def test_find_new_y3(slope, y_int, input_x, expected):
+	from line_yvalue import find_new_y3
+	answer = find_new_y3(slope, y_int, input_x)
+	assert answer == expected
