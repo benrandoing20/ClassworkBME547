@@ -26,7 +26,7 @@ def find_y_int(slope, input_tuple2):
 	y_int = y2 - m*x2
 	return y_int
 
-def find_new_y3(slope, input_x):
+def find_new_y3(slope, y_int, input_x):
 	m = slope
 	x3 = input_x
 	y3 = m * x3 + y_int
@@ -39,6 +39,6 @@ if __name__ == "__main__":
 	tup1, tup2, x3 = get_points()
 	slope = find_slope(tup1, tup2)
 	y_int = find_y_int(slope, tup2)
-	y3 = find_new_y3(slope, x3)
+	y3 = find_new_y3(slope, y_int, x3)
 	y_out(y3)
 
