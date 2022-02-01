@@ -1,13 +1,13 @@
 # test_line_yvalue.py
 
-def import pytest
+import pytest
 
 @pytest.mark.parametrize("input_tuple1, input_tuple2, input_x, expected",[
-	[(0,0), (20,0), 10, 0],
-	[(0,0), (0,20), 0, 10],
-	[(-10,-10), (10,10),0, 0],
+	[(4,9), (0,1), 2, 5],
+	[(0,0), (10,20), 5, 10],
+	[(-10,-10), (10,10), 0, 0],
 ])
 def test_check_yval(input_tuple1,input_tuple2, input_x, expected):
-	from line_valuey import identify_y
-	answer = identify_y(input_tuple1, input_tuple2, input_x)
+	from line_yvalue import check_yval
+	answer = check_yval(input_tuple1, input_tuple2, input_x)
 	assert answer == expected

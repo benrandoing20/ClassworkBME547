@@ -9,8 +9,6 @@ def get_points():
 	x_new = float(input("Enter Third x-Coordinate ie: 5: "))
 	tup1 = (x1,y1)
 	tup2 = (x2,y2)
-	print(tup1)
-	print(tup2)
 	return tup1, tup2, x_new
 
 def check_yval(input_tuple1, input_tuple2, input_x):
@@ -22,9 +20,13 @@ def check_yval(input_tuple1, input_tuple2, input_x):
 	m = (y2 - y1) / (x2 - x1)
 	y_int = y2 - m*x2
 	y3 = m * x3 + y_int
-	print(y3)
+	return(y3)
+
+def y_out(y3):
+	print("The Third y-Coordinate is {:.1f}".format(y3))
 
 if __name__ == "__main__":
 	tup1, tup2, x3 = get_points()
-	check_yval(tup1, tup2, x3)
+	y3 = check_yval(tup1, tup2, x3)
+	y_out(y3)
 
