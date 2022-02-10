@@ -1,3 +1,10 @@
+class Patient:
+
+	def __init__(self):
+		
+
+
+
 def add_patient(patient_name, patient_id, age):
 	new_patient = [patient_name, patient_id, age, []]
 	return new_patient
